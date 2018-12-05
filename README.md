@@ -1,6 +1,6 @@
 # DFPlayerMini - Un mini reproductor MP3 para Arduino
 
-DFPlayerMini - Un mini reproductor MP3 para Arduino. DFPlayerMini es una extensión para [mBlock] (http://www.mblock.cc) que sirve para controlar con Arduino módulos reproductores MP3 DFPlayer Mini. Esta extensión emplea la libreria [DFRobotDFPlayerMini](https://github.com/DFRobot/DFRobotDFPlayerMini) para [Arduino](http://arduino.cc), habiéndose adaptado para poder ser utilizada con mBlock.
+DFPlayerMini - Un mini reproductor MP3 para Arduino. DFPlayerMini es una extensión para [mBlock](http://www.mblock.cc) que sirve para controlar con Arduino módulos reproductores MP3 DFPlayer Mini. Esta extensión emplea la libreria [DFRobotDFPlayerMini](https://github.com/DFRobot/DFRobotDFPlayerMini) para [Arduino](http://arduino.cc), habiéndose adaptado para poder ser utilizada con mBlock.
 
 Descargar
 ----------
