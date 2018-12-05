@@ -4,7 +4,7 @@ DFPlayerMini - Un mini reproductor MP3 para Arduino. DFPlayerMini es una extensi
 
 Descargar
 ----------
-La version mas actualizada se encuentra en el github de [MatrizLed-mBlock](https://github.com/miqueas1988/DFPlayerMini)
+La version mas actualizada se encuentra en el github de [DFPlayerMini](https://github.com/miqueas1988/DFPlayerMini)
 
 Instalación
 ----------
