@@ -1,0 +1,140 @@
+{   
+   "extensionName": "DFPlayerMini",
+   "description": "Extensión de mBlock para reproductor MP3 DFPlayer Mini - Solo Arduino",
+   "version": "1.0",
+   "author": "Miqueas Fortes (miqueas@digitalcodesign.com)",
+   "homepage": "https://github.com/miqueas1988/DFPlayerMini",
+   "sort":0,
+   "javascriptURL":"",
+   "firmware":"1.0",
+   "extensionPort":0,
+   "blockSpecs": [
+      [
+         "w",
+         "Serial config: BaudRate %n  RX %n  TX %n",
+         "initSerial",
+         "9600",
+         "2",
+         "4",
+         {
+            "setup":"miPuertoSerie.begin({0});	// BaudRate del puerto serie\n
+miMP3.begin(miPuertoSerie);	// Pasamos configuración del puerto serie al objeto reproductor\n",
+            "inc":"#include \"DFRobotDFPlayerMini.h\"\n",
+			"def":"DFRobotDFPlayerMini miMP3;\n
+SoftwareSerial miPuertoSerie({1}, {2}); // Pines digitales para RX y TX\n",
+            "work":"",
+            "loop":""
+         }
+      ],	  
+	  [
+		 "w",
+		 "Reproducir canción %n",
+		 "cancion",
+		 "1",
+		 {
+			"setup":"",
+            "inc":"",
+            "def":"",
+            "work":"miMP3.play({0});    // Reproduce la cancíón indicada\n",
+            "loop":""
+		 }
+	  ],
+	  [
+		 "w",
+		 "Reproducir todo",
+		 "repAll",
+		 {
+			"setup":"",
+            "inc":"",
+            "def":"",
+            "work":"miMP3.enableLoopAll();    // Reproduce en orden ascendente todas las canciones disponibles\n",
+            "loop":""
+		 }
+	  ],
+	  [
+		 "w",
+		 "Stop",
+		 "parar",
+		 {
+			"setup":"",
+            "inc":"",
+            "def":"",
+            "work":"miMP3.pause();    // Detiene la reproducción\n",
+            "loop":""
+		 }
+	  ],
+	  [
+		 "w",
+		 "Canción previa",
+		 "previa",
+		 {
+			"setup":"",
+            "inc":"",
+            "def":"",
+            "work":"miMP3.previous();    // Reproduce la canción anterior de la lista de reproducción\n",
+            "loop":""
+		 }
+	  ],
+	  [
+		 "w",
+		 "Canción siguiente",
+		 "siguiente",
+		 {
+			"setup":"",
+            "inc":"",
+            "def":"",
+            "work":"miMP3.next();    // Reproduce la siguiente canción de la lista de reproducción\n",
+            "loop":""
+		 }
+	  ],
+	  [
+		 "w",
+		 "Subir volumen",
+		 "subir",
+		 {
+			"setup":"",
+            "inc":"",
+            "def":"",
+            "work":"miMP3.volumeUp();    // Incrementa el nivel de volumen en una unidad\n",
+            "loop":""
+		 }
+	  ],
+	  [
+		 "w",
+		 "Bajar volumen",
+		 "bajar",
+		 {
+			"setup":"",
+            "inc":"",
+            "def":"",
+            "work":"miMP3.volumeDown();    // Reduce el nivel de volumen en una unidad\n",
+            "loop":""
+		 }
+	  ],
+	  [
+		 "w",
+		 "Volumen %n",
+		 "volumen",
+		 "30",
+		 {
+			"setup":"",
+            "inc":"",
+            "def":"",
+            "work":"miMP3.volume({0});    // Establece el nivel de volumen al valor indicado\n",
+            "loop":""
+		 }
+	  ],
+		  
+   ],
+   "menus": {
+      "status": ["on","off"]
+   },
+   "values":{
+      "on":true,
+      "off":false
+   },
+   "translators":{
+      "nl_NL": {
+      }
+   }
+}
